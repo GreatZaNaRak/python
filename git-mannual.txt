@@ -1,0 +1,16 @@
+git commit [branch or commit or tag]: คือเดินไปตำแหน่งของ commit หรือ tag นั้นๆ 
+	และเป็นการเปลี่ยน branch ได้ด้วย
+
+git restore
+	[--staged .]: คือย้อนโค้ดที่ add แล้วให้กลับไปเป็น untaged file
+	[.]: ไม่มี option คือ discard change (ลบโค้ดที่เป็น untaged file)
+
+git reset: ย้อน code ที่ commit ไปแล้วให้กลับมาอาจเป็น tag หรือ untaged file ก็ได้
+	[--soft head~n]: ย้อนโค้ดที่ commit ให้กลับมาเป็น tag file
+			(file ที่โดน add) โดยจะย้อนไป n commit
+	[--hard head~n]: discard commit นั้นๆที่ถูกย้อนทิ้งหมดเลย
+
+	--> อันนี้ใช้กับ file ที่ยังไม่ได้ถูก push ถ้าPushแล้ว reset ไม่ได้ต้อง revert เอา
+
+git revert [commit id or tag]: ย้อนไป commit นั้นๆแล้วสร้าง new commit ที่เป็น
+				ผลของการถูกย้อนมา
