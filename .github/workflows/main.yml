@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: running test ...
+    runs-on: ubuntu-latest
+    steps:
+      -  run: |
+            echo Hello World
+            echo finish
